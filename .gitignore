@@ -1,0 +1,6 @@
+__pycache__
+.dist
+cover_files
+uploads
+stego_video.mp4
+video_stego.py
