@@ -96,7 +96,7 @@ def aud_steg():
             except Exception as e:
                 messagebox.showerror("Error", str(e))
 
-    root = tk.Tk()
+    root = tk.Toplevel()
     root.title("Audio Steganography")
     root.geometry("800x600")
 

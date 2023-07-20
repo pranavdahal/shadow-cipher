@@ -1,9 +1,14 @@
 import tkinter as tk
 from PIL import ImageTk, Image
+from tkinter import messagebox
 from image import img_steg
 from text import txt_steg
 from audio import aud_steg
 from video import vid_steg
+
+def exit():
+    if messagebox.askyesno("Exit", "Do you want to exit the program?"):
+        root.destroy()
 
 root = tk.Tk()
 root.title("Steganography")
@@ -55,7 +60,7 @@ def create_custom_button(frame, img_path, description, command):
 img_button = create_custom_button(button_frame, r".\icons\image.png", "IMAGE STEGANOGRAPHY \n Hide your content inside an image.\n Extract the hidden content in image.\n Click to Explore.", img_steg)
 txt_button = create_custom_button(button_frame, r".\icons\text.jpg", "TEXT STEGANOGRAPHY \n Hide your content inside a text file.\n Extract the hidden content in the text.\n Click to Explore.", txt_steg)
 aud_button = create_custom_button(button_frame, r".\icons\audio.jpg", "AUDIO STEGANOGRAPHY \n Hide your content inside an audio.\n Extract the hidden content in an audio.\n Click to Explore.", aud_steg)
-vid_button = create_custom_button(button_frame, r".\icons\video.png", "VIDEO STEGANOGRAPHY \n Hide your content inside a video.\n Extract the hidden content in a video.\n Click to Explore.", vid_steg)
+vid_button = create_custom_button(button_frame, r".\icons\video.jpg", "EXIT \n Thank you for using it. \n Stay updated for new features.", exit)
 
 img_button.grid(row=0, column=0, padx=20, pady=20)
 txt_button.grid(row=0, column=1, padx=20, pady=20)

@@ -138,7 +138,7 @@ def txt_steg():
         if messagebox.askokcancel("Exit", "Are you sure you want to exit?"):
             root.destroy()
 
-    root = tk.Tk()
+    root = tk.Toplevel()
     root.title("Text Steganography")
     root.geometry("800x600")
 

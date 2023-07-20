@@ -96,7 +96,7 @@ def img_steg():
             image = cv2.imread(image_path)
             decode_img_data(image)
 
-    root = tk.Tk()
+    root = tk.Toplevel()
     root.title("Image Steganography")
     root.geometry("800x600")  # Set a preferred window size
 
@@ -110,7 +110,7 @@ def img_steg():
     bg_canvas.pack(fill="both", expand=True)
 
     # Add the image to the Canvas
-    # bg_canvas.create_image(0, 0, image=bg_photo, anchor="nw")
+    bg_canvas.create_image(0, 0, image=bg_photo, anchor="nw")
 
     # Add title directly on the canvas
     title_label = bg_canvas.create_text(400, 50, text="IMAGE STEGANOGRAPHY", font=("Arial", 20, "bold"), fill="white")
