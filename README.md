@@ -1,0 +1,3 @@
+# shadow-cipher
+
+Shadow Cipher is a data security application that combines the powers of steganography and cryptography, allowing users to safeguard their sensitive information. The software allows users to hide their data within cover files, such as images, text, or audio, concealing its presence from prying eyes. By leveraging advanced cryptographic algorithms, Shadow Cipher ensures that sensitive data remains hidden from unauthorized access, enhancing the overall security of the concealed information. With a user-friendly interface, Shadow Cipher serves as a covert solution for individuals and organizations seeking to fortify the confidentiality of their data while maintaining a veil of secrecy.
