@@ -11,14 +11,14 @@ def exit():
         root.destroy()
 
 root = tk.Tk()
-root.title("Steganography")
+root.title("ShadowCipher")
 root.geometry("1920x1080")
 root.configure(bg="black")
 
-title_label = tk.Label(root, text="STEGANOGRAPHY", font=("Arial",20 , "bold"), bg="black", fg="white")
+title_label = tk.Label(root, text="SHADOW CIPHER", font=("Arial",20 , "bold"), bg="black", fg="white")
 title_label.pack(pady=(30, 5))
 
-description_label = tk.Label(root, text="Hide your content securely and safely.", font=("Arial", 14), bg="black", fg="white")
+description_label = tk.Label(root, text="Secure your data with a blend of cryptography and steganography.", font=("Arial", 14), bg="black", fg="white")
 description_label.pack(pady=10)
 
 button_frame = tk.Frame(root, bg="black")

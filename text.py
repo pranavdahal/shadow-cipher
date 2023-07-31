@@ -120,7 +120,7 @@ def txt_steg():
                 decimal_data = BinaryToDecimal(t4)
                 final+=chr((decimal_data ^ 170) - 48)
 
-        messagebox.showinfo("Encoded data ",final)
+        messagebox.showinfo("ShadowCipher","Extracted Data: \n" + final)
         print("\nMessage after decoding from the stego file:- ",final)
 
     def encode_text():
@@ -139,7 +139,7 @@ def txt_steg():
             root.destroy()
 
     root = tk.Toplevel()
-    root.title("Text Steganography")
+    root.title("ShadowCipher-Text")
     root.geometry("800x600")
 
     # Load the image
@@ -155,7 +155,7 @@ def txt_steg():
     bg_canvas.create_image(0, 0, image=bg_photo, anchor="nw")
 
     # Add title directly on the canvas
-    title_label = bg_canvas.create_text(400, 50, text="TEXT STEGANOGRAPHY", font=("Arial", 20, "bold"), fill="white")
+    title_label = bg_canvas.create_text(400, 50, text="SHADOW CIPHER - Text", font=("Arial", 20, "bold"), fill="white")
 
     # Create a larger frame with white color as a border
     border_frame = tk.Frame(bg_canvas, bg="white", bd=1)
@@ -164,7 +164,7 @@ def txt_steg():
     box_frame = tk.Frame(border_frame, bg="black")  # Semi-transparent frame
     box_frame.pack(expand=True, fill="both", padx=2, pady=2)  # Packed inside the border frame
 
-    encode_label = tk.Label(box_frame, text="Enter the data to be Encoded:", font=("Arial", 14), bg="black", fg="white")
+    encode_label = tk.Label(box_frame, text="Enter the data to be hidden:", font=("Arial", 14), bg="black", fg="white")
     encode_label.pack(padx=(20, 20), pady=(20, 10))
 
     entry = tk.Entry(box_frame, width=30, font=("Arial", 14), bg="white", fg="black")
@@ -176,12 +176,12 @@ def txt_steg():
     def on_leave(e):
         e.widget['background'] = 'black'  # Changes the background color of the widget not being hovered over
 
-    encode_button = tk.Button(box_frame, text="Encode Text", width=25, font=("Arial", 14), command=encode_text, bg="black", fg="white", highlightbackground="white")
+    encode_button = tk.Button(box_frame, text="Hide Data", width=25, font=("Arial", 14), command=encode_text, bg="black", fg="white", highlightbackground="white")
     encode_button.pack(pady=20, padx=(20, 20))
     encode_button.bind("<Enter>", on_enter)
     encode_button.bind("<Leave>", on_leave)
 
-    decode_button = tk.Button(box_frame, text="Decode Text", width=25, font=("Arial", 14), command=decode_text, bg="black", fg="white", highlightbackground="white")
+    decode_button = tk.Button(box_frame, text="Extract Data", width=25, font=("Arial", 14), command=decode_text, bg="black", fg="white", highlightbackground="white")
     decode_button.pack(pady=10, padx=(20, 20))
     decode_button.bind("<Enter>", on_enter)
     decode_button.bind("<Leave>", on_leave)
